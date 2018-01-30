@@ -84,7 +84,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AgentPather.cs" />
     <Compile Include="Assets\BallController.cs" />
+    <Compile Include="Assets\BoostPad.cs" />
     <Compile Include="Assets\FleeBehavior.cs" />
     <Compile Include="Assets\PersuitBehavior.cs" />
     <Compile Include="Assets\SeekBehavior.cs" />
