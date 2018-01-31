@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class PersuitBehavior : MonoBehaviour
 {
 
@@ -10,7 +10,7 @@ public class PersuitBehavior : MonoBehaviour
     Vector3 dVelocity;
     Vector3 ProjectedPos;
 
-    Rigidbody targetrb;
+    NavMeshAgent targetrb;
 
     public float projdis;
     public float speed;
@@ -23,7 +23,7 @@ public class PersuitBehavior : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        targetrb = target.GetComponent<Rigidbody>();
+        targetrb = target.GetComponent<NavMeshAgent>();
 
 
     }
@@ -54,8 +54,8 @@ public class PersuitBehavior : MonoBehaviour
 
 
         Debug.DrawLine(transform.position, ProjectedPos, Color.green);
-        Debug.DrawLine(transform.position, targetrb.position, Color.red);
-        Debug.DrawLine(targetrb.position, ProjectedPos, Color.blue);
+        //Debug.DrawLine(transform.position, targetrb.position, Color.red);
+        Debug.DrawLine(targetrb.transform.position, ProjectedPos, Color.blue);
 
     }
 }
