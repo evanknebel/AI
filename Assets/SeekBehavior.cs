@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class SeekBehavior : MonoBehaviour
 {
-    Rigidbody rb;
-
-    Vector3 desiredVelocity;
-
+    Vector3 dVelocity;
     public float speed;
     public Transform target;
-    
-	// Use this for initialization
-	void Start ()
-    {
-        rb = GetComponent<Rigidbody>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        desiredVelocity = speed * (target.position - transform.position).normalized;
 
-        rb.AddForce(desiredVelocity - rb.velocity);
-	}
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    //void Update ()
+    //   {
+    //       dVelocity = speed * (target.position - transform.position).normalized;
+
+    //       rb.AddForce(dVelocity - rb.velocity);
+    //}
+
+    public Vector3 returnTargetPos()
+    {
+        return target.position;
+    }
 }

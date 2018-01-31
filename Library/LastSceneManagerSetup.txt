@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AIstuff.unity
+- path: Assets/Navigation.unity
   isLoaded: 1
   isActive: 1

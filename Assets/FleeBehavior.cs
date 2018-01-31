@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class FleeBehavior : MonoBehaviour
 {
-    Rigidbody rb;
-
-    Vector3 desiredVelocity;
-
+    Vector3 dVelocity;
     public float speed;
     public Transform target;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
-    void Update ()
-    {
-        desiredVelocity = speed * (target.position + transform.position).normalized;
+    //void Update()
+    //{
+    //    dVelocity = speed * ((target.position + transform.position).normalized);
 
-        rb.AddForce(desiredVelocity - rb.velocity);
+    //    rb.AddForce(dVelocity - rb.velocity);
+    //}
+
+    public Vector3 fleeVector()
+    {
+        return (target.position - transform.position) * -1 + transform.position;
     }
 }

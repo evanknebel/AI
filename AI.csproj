@@ -90,6 +90,8 @@
     <Compile Include="Assets\FleeBehavior.cs" />
     <Compile Include="Assets\PersuitBehavior.cs" />
     <Compile Include="Assets\SeekBehavior.cs" />
+    <Compile Include="Assets\StateMachine.cs" />
+    <Compile Include="Assets\WanderBehavior.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
